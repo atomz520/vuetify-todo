@@ -42,7 +42,7 @@
       app
       color="primary"
       dark
-      prominent
+      height="170"
       src="https://picsum.photos/1920/1080?random"
     >
       <template v-slot:img="{ props }">
@@ -59,7 +59,12 @@
           <search />
         </v-row>
         <v-row>
-          <v-app-bar-title class="ml-3">RivrMizt To-do</v-app-bar-title>
+          <v-app-bar-title class="text-h4 ml-3">
+            RivrMizt To-do
+          </v-app-bar-title>
+        </v-row>
+        <v-row>
+          <live-date-time />
         </v-row>
       </v-container>
     </v-app-bar>
@@ -83,6 +88,7 @@
     }),
     components: {
       'search' : require('@/components/Tools/Search.vue').default,
+      'live-date-time' : require('@/components/Tools/LiveDateTime.vue').default,
       'snackbar' : require('@/components/Shared/Snackbar.vue').default
     }
   }
