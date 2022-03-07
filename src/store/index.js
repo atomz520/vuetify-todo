@@ -6,6 +6,7 @@ Vue.use(Vuex)
 export default new Vuex.Store({
   state: {
     search: null,
+    appTitle: process.env.VUE_APP_TITLE,
     tasks:[
       {
         id: 1,

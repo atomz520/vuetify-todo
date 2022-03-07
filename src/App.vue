@@ -82,9 +82,9 @@
           <search />
         </v-row>
         <v-row>
-          <v-app-bar-title class="text-h4 ml-3">
-            RivrMizt To-do
-          </v-app-bar-title>
+          <v-toolbar-title class="text-h4 ml-3">
+            {{ $store.state.appTitle }}
+          </v-toolbar-title>
         </v-row>
         <v-row>
           <live-date-time />
