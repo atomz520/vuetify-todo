@@ -2,6 +2,7 @@
   <v-app id="inspire">
     <v-navigation-drawer
       v-model="drawer"
+      :mobile-breakpoint="768"
       app
     >
       <v-list-item>
@@ -15,7 +16,29 @@
         </v-list-item-content>
       </v-list-item>
 
-      <v-divider></v-divider>
+      <v-img
+      class="pa-4"
+        src="https://picsum.photos/id/11/500/300"
+        lazy-src="https://picsum.photos/id/11/10/6"
+        height="150"
+        gradient="to top right, rgba(19,84,122,.5), rgba(128,208,199,.8)"
+      >
+        <v-avatar
+          class="mb-2"
+          size="70"
+        >
+          <img
+            src="https://cdn.vuetifyjs.com/images/john.jpg"
+            alt="Fanryn"
+          >
+        </v-avatar>
+        <div class="white--text text-subtitle-1 font-weight-bold">
+          Fanryn
+        </div>
+        <div class="white--text text-subtitle-2">
+          atom_z520
+        </div>
+      </v-img>
 
       <v-list
         dense
@@ -52,7 +75,7 @@
         ></v-img>
       </template>
 
-      <v-container class="pa-0">
+      <v-container class="header-container pa-0">
         <v-row>
           <v-app-bar-nav-icon @click='drawer = !drawer'></v-app-bar-nav-icon>
           <v-spacer></v-spacer>
@@ -93,3 +116,7 @@
     }
   }
 </script>
+<style lang="sass">
+  .header-container
+    max-width: none !important
+</style>
