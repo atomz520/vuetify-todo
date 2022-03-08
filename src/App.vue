@@ -65,7 +65,7 @@
       app
       color="primary"
       dark
-      height="170"
+      :height="$route.path === '/' ? 238 : 170"
       src="https://picsum.photos/1920/1080?random"
     >
       <template v-slot:img="{ props }">
@@ -89,6 +89,11 @@
         <v-row>
           <live-date-time />
         </v-row>
+        <v-row
+          v-if="$route.path === '/'"
+        >
+          <field-add-task/>
+        </v-row>
       </v-container>
     </v-app-bar>
 
@@ -110,9 +115,13 @@
       drawer: null 
     }),
     components: {
+      'field-add-task': require('@/components/Todo/FieldAddTask.vue').default,
       'search' : require('@/components/Tools/Search.vue').default,
       'live-date-time' : require('@/components/Tools/LiveDateTime.vue').default,
       'snackbar' : require('@/components/Shared/Snackbar.vue').default
+    },
+    mounted() {
+      this.$store.dispatch('getTasks')
     }
   }
 </script>
