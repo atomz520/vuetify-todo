@@ -17,7 +17,9 @@ jobs:
           script: |
             cd /var/www/html
             rm -r vuetify-todo
-            mkdir vuetify-todo1
-            cd vuetfy-todo1
             git clone git@github.com:atomz520/vuetify-todo.git
+            cd vuetify-todo
+            npm install
+            pm2 delete "vuetify-todo"
+            pm2 start "npm run serve" --name "vuetify-todo"
             echo 'Deployment successful to digital ocean' 

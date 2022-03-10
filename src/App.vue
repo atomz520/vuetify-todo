@@ -33,10 +33,10 @@
           >
         </v-avatar>
         <div class="white--text text-subtitle-1 font-weight-bold">
-          Fanryn
+          Kawagiri
         </div>
         <div class="white--text text-subtitle-2">
-          atom_z520
+          rivrmizt
         </div>
       </v-img>
 
