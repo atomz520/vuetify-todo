@@ -20,6 +20,8 @@ jobs:
             git clone git@github.com:atomz520/vuetify-todo.git
             cd vuetify-todo
             npm install
+            su - nodejs
+            cd /var/www/html/vuetify-todo
             pm2 delete "vuetify-todo"
             pm2 start "npm run serve" --name "vuetify-todo"
             echo 'Deployment successful to digital ocean' 
